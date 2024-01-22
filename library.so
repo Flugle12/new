@@ -1,1 +1,8 @@
-g++ -o app new/library.cpp -L<new/library.cpp> -llibrary
+// library.cpp
+#include <iostream>
+
+extern "C" {
+    void hello() {
+        std::cout << "Hello from the dynamic library!" << std::endl;
+    }
+}
