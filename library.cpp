@@ -5,7 +5,7 @@
 typedef void (*HelloFunction)();
 
 int main() {
-    void* handle = dlopen("./-llibrary.so", RTLD_LAZY);
+    void* handle = dlopen("./library.so", RTLD_LAZY);
     if (!handle) {
         std::cerr << "Cannot open library: " << dlerror() << std::endl;
         return 1;
@@ -28,4 +28,3 @@ int main() {
 
     return 0;
 }
-
